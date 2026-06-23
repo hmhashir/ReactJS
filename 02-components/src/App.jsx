@@ -1,11 +1,13 @@
 import React from 'react'
-import carders from './components/card'
+import card from './components/card'
+import navbar from './components/navbar'
 
 const App = () => {
   return (
     <>
     <div>App</div>
-    {carders()}
+    {card()}
+    {navbar()}
     </>
   )
 }
