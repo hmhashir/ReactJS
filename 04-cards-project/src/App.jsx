@@ -1,4 +1,3 @@
-import React from 'react'
 import Card from './components/Card'
 
 const App = () => {
@@ -109,8 +108,10 @@ const App = () => {
   return (
     <div className='parent'>
 
-      {jobOpenings.map(function(elem) {
-        return <Card />
+      {jobOpenings.map(function(elem,idx) {
+        return <div key={idx}>
+          <Card pay={elem.pay} date={elem.datePosted} loc={elem.location} company={elem.companyName} post={elem.post} logo={elem.brandLogo} tag1={elem.tag1} tag2={elem.tag2}/>
+        </div>
       })}
     </div>
   )
